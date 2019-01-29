@@ -1,0 +1,39 @@
+
+   [x] prosmotrovshchik arhivov arcview
+
+   zto eshche odna gooljayoushchaja po rossii ochen poleznaja programma. ona pozvoljaet vam v 3-m nortone i volkove  ne  tolko  so  vsemi  oodobstvami  prosmotret spisok oopakovanih fajlov  (nazvanie, dlinnoo kazhdogo fajla arhive i bez onogo, procent szhatija),  no  i  prochitat  soderzhimoe  kozhdogo  iz  nih s pomoshchyou klavishi f3, dostat  iz  oopakovki  lyoubie  noozhnie fajli, videliv ih klavishej ins i nazhav f4 (libo shift+f4,  esli hotite raspakovat ih v droogooyou direktoriyou; togda arcview predlozhit vvesti poot). pribavte k semoo  oodalenie iz arhiva  nenoozhnih vam fajlov (f8)  i testirovanie fajlov (f9).   a takzhe sortirovkoo fajlov po imeni, rasshireniyou, date i razmeroo (f2). a vdobavok oodobnooyou strokoo podskazok, podobnooyou
+privichnoj nortonovskoj... noo chto eshche chelovekoo noozhno?
+   pravda, oochtite, chto  arcview  ne imeet  sobstvennih vstroenih arhivatorov i
+rabotaet lish s temi, kotorie est oo vas v kompyoutere.
+   v  arcview  vozmozhno  videlenie fajlov po maske ("serij plyous"), i togda vse
+visheperechislennie operacii boodoot vipolneni nad vsej grooppoj.
+   dlja zapooska eatoj  ispolnennoj dobrodetelej programmi nado vstat na arhiv i
+nabrat: arcview pict.arj (imja arhiva,  konechno,  mozhet  bit  lyoubim,  a  sama
+programma dolzhna oo vas bit v nalichii i nahoditsja v izvestnoj dosoo direktorii.
+no eato, ja doomayou,  vi  oozhe  i  bez  menja ponimaete). vihod iz prosmotrovshchika po
+klavishe esc ili f10.
+   vsego  visheskazannogo  dostatochno, chtobi ponjat: veshch horoshaja, boodem brat.
+ostalos tolko najti ee i oostanovit.
+   loochshe  vsego  vospolzovatsja  oostanovochnoj  disketoj,  ili,  kak   prinjato
+virazhatsja v srede  "programmerov" i samih oochenih "youzerov", "installjaciej" (ot
+anglijskogo install - oostanavlivat).  v  kazhdoj  porjadochnoj  installjacii est
+fajl setup libo install, zapoostiv kotorij vi reshaete vse problemi s pravilnoj
+oostanovkoj  programmi (bood to novaja igrooshka ili programnij kompleks windows).
+za  vas  vse  delaet  programma, lish vremja ot vremeni zadavaja prilichestvooyoushchie
+momentoo voprosi (boodem stavit, hozjain, ili ne boodem, a esli da, to kooda, gde,
+kak, pochem...).
+   esli  oostanovochnogo  paketa  net,  stoit  podklyouchit  arcview  vroochnooyou (ili
+pozvat menja - ja sdelayou i paket, i vse ostalnoe  ), tem  bolee  chto  eato  ne ochen slozhno.
+   v tretem nortone loochshe vsego vstavit v fajl nc.ext stroki
+   arj:  c:\tools\arcview !.!
+   zip:  c:\tools\arcview !.!
+   lzh:  c:\tools\arcview !.!
+kak eato bilo opisano v glave "kak norton ooznet, chto delat s fajlom, kogda vi
+nazhimaete na vvod".  togda prosmotr arhiva boodet proishodit po nazhatiyou enter
+na fajle.
+   v chetvertom nortone (i volkove) legche sdelat tak, chtobi a.v. vizivalsja
+nazhatiem klavishi prosmotra f3. dostatochno prosto skopirovat a.v. v
+direktoriyou nc. oochtite tolko, chto "rodnoj"...
+eof
+
+

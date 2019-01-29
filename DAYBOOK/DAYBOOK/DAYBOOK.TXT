@@ -1,0 +1,148 @@
+DECLARE SUB Label1_Click ()
+TYPE Datos
+  DataSer AS SINGLE
+  Holiday AS STRING * 50
+  TypeHol AS STRING * 1
+END TYPE
+
+
+SUB Command1_Click ()
+Label1_Click
+
+
+END SUB
+
+SUB Form_Load ()
+Screen.ControlPanel(7) = 0
+END SUB
+
+SUB Form_Resize ()
+
+dialog.SHOW
+
+Label5.caption = FORMAT$(NOW, "d mmmm yyyy , dddd                         hh:mm")
+
+DIM Forms AS Datos
+
+OPEN "c:\madest\daybook\daybook.day" FOR RANDOM AS #1 LEN = LEN(Forms)
+
+Max = LOF(1) / LEN(Forms)
+FOR Rec = 1 TO Max
+GET #1, Rec, Forms
+
+label6.caption = "—â¥­¨¥ ¡ §ë..." + STR$(FIX(100 / Max * Rec)) + "% (" + HEX$(100 / Max * Rec) + ")"
+
+IF MONTH(NOW) = 1 THEN CurDay = DAY(NOW)
+IF MONTH(NOW) = 2 THEN CurDay = DAY(NOW) + 31
+IF MONTH(NOW) = 3 THEN CurDay = DAY(NOW) + 59
+IF MONTH(NOW) = 4 THEN CurDay = DAY(NOW) + 90
+IF MONTH(NOW) = 5 THEN CurDay = DAY(NOW) + 120
+IF MONTH(NOW) = 6 THEN CurDay = DAY(NOW) + 151
+IF MONTH(NOW) = 7 THEN CurDay = DAY(NOW) + 181
+IF MONTH(NOW) = 8 THEN CurDay = DAY(NOW) + 212
+IF MONTH(NOW) = 9 THEN CurDay = DAY(wno) + 242
+IF MONTH(NOW) = 10 THEN CurDay = DAY(NOW) + 273
+IF MONTH(NOW) = 11 THEN CurDay = DAY(NOW) + 303
+IF MONTH(NOW) = 12 THEN CurDay = DAY(NOW) + 334
+
+
+IF MONTH(Forms.DataSer) = 1 THEN GetDay = DAY(Forms.DataSer)
+IF MONTH(Forms.DataSer) = 2 THEN GetDay = DAY(Forms.DataSer) + 31
+IF MONTH(Forms.DataSer) = 3 THEN GetDay = DAY(Forms.DataSer) + 59
+IF MONTH(Forms.DataSer) = 4 THEN GetDay = DAY(Forms.DataSer) + 90
+IF MONTH(Forms.DataSer) = 5 THEN GetDay = DAY(Forms.DataSer) + 120
+IF MONTH(Forms.DataSer) = 6 THEN GetDay = DAY(Forms.DataSer) + 151
+IF MONTH(Forms.DataSer) = 7 THEN GetDay = DAY(Forms.DataSer) + 181
+IF MONTH(Forms.DataSer) = 8 THEN GetDay = DAY(Forms.DataSer) + 212
+IF MONTH(Forms.DataSer) = 9 THEN GetDay = DAY(Forms.DataSer) + 242
+IF MONTH(Forms.DataSer) = 10 THEN GetDay = DAY(Forms.DataSer) + 273
+IF MONTH(Forms.DataSer) = 11 THEN GetDay = DAY(Forms.DataSer) + 303
+IF MONTH(Forms.DataSer) = 12 THEN GetDay = DAY(Forms.DataSer) + 334
+
+
+IF YEAR(Forms.DataSer) > 1800 THEN IF GetDay = CurDay + 0 THEN label2.caption = MID$(Forms.Holiday, 1, 45) + "(" + STR$(YEAR(NOW) - YEAR(Forms.DataSer)) + " «¥â )": PLAY "c30e30g30e30g30>c10<": GOTO xim
+IF GetDay = CurDay + 0 THEN label2.caption = MID$(Forms.Holiday, 1, 45): PLAY "c30e30g30e30g30>c10<": GOTO xim
+
+xim:
+lm = 1: IF GetDay = CurDay + 1 THEN label3.caption = "‡ ¢âà  ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 2: IF GetDay = CurDay + 2 THEN label3.caption = "—¥à¥§ 2 ¤­ï ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 3: IF GetDay = CurDay + 3 THEN label3.caption = "—¥à¥§ 3 ¤­ï ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 4: IF GetDay = CurDay + 4 THEN label3.caption = "—¥à¥§ 4 ¤­ï ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 5: IF GetDay = CurDay + 5 THEN label3.caption = "—¥à¥§ 5 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 6: IF GetDay = CurDay + 6 THEN label3.caption = "—¥à¥§ 6 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 7: IF GetDay = CurDay + 7 THEN label3.caption = "—¥à¥§ 7 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 8: IF GetDay = CurDay + 8 THEN label3.caption = "—¥à¥§ 8 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 9: IF GetDay = CurDay + 9 THEN label3.caption = "—¥à¥§ 9 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 10: IF GetDay = CurDay + 10 THEN label3.caption = "—¥à¥§ 10 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 11: IF GetDay = CurDay + 11 THEN label3.caption = "—¥à¥§ 11 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 12: IF GetDay = CurDay + 12 THEN label3.caption = "—¥à¥§ 12 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 13: IF GetDay = CurDay + 13 THEN label3.caption = "—¥à¥§ 13 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 14: IF GetDay = CurDay + 14 THEN label3.caption = "—¥à¥§ 14 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 15: IF GetDay = CurDay + 15 THEN label3.caption = "—¥à¥§ 15 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 16: IF GetDay = CurDay + 16 THEN label3.caption = "—¥à¥§ 16 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 17: IF GetDay = CurDay + 17 THEN label3.caption = "—¥à¥§ 17 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 18: IF GetDay = CurDay + 18 THEN label3.caption = "—¥à¥§ 18 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 19: IF GetDay = CurDay + 19 THEN label3.caption = "—¥à¥§ 19 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 20: IF GetDay = CurDay + 20 THEN label3.caption = "—¥à¥§ 20 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 21: IF GetDay = CurDay + 21 THEN label3.caption = "—¥à¥§ 21 ¤¥­ì ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 22: IF GetDay = CurDay + 22 THEN label3.caption = "—¥à¥§ 22 ¤­ï ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 23: IF GetDay = CurDay + 23 THEN label3.caption = "—¥à¥§ 23 ¤­ï ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 24: IF GetDay = CurDay + 24 THEN label3.caption = "—¥à¥§ 24 ¤­ï ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 25: IF GetDay = CurDay + 25 THEN label3.caption = "—¥à¥§ 25 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 26: IF GetDay = CurDay + 26 THEN label3.caption = "—¥à¥§ 26 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 27: IF GetDay = CurDay + 27 THEN label3.caption = "—¥à¥§ 27 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 28: IF GetDay = CurDay + 28 THEN label3.caption = "—¥à¥§ 28 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 29: IF GetDay = CurDay + 29 THEN label3.caption = "—¥à¥§ 29 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 30: IF GetDay = CurDay + 30 THEN label3.caption = "—¥à¥§ 30 ¤­¥© ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 31: IF GetDay = CurDay + 31 THEN label3.caption = "—¥à¥§ 31 ¤¥­ì ¡ã¤¥â " + Forms.Holiday: GOTO comp
+lm = 0
+
+comp:
+IF OK = 1 THEN GOTO comr
+IF GetDay = CurDay - 7 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "7 ¤­¥© ­ § ¤ ¡ë«® " + Forms.Holiday: OK = 1: GOTO comr
+IF GetDay = CurDay - 6 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "6 ¤­¥© ­ § ¤ ¡ë«® " + Forms.Holiday: OK = 1: GOTO comr
+IF GetDay = CurDay - 5 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "5 ¤­¥© ­ § ¤ ¡ë«® " + Forms.Holiday: OK = 1: GOTO comr
+IF GetDay = CurDay - 4 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "4 ¤­ï ­ § ¤ ¡ë«® " + Forms.Holiday: OK = 1: GOTO comr
+IF GetDay = CurDay - 3 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "3 ¤­ï ­ § ¤ ¡ë«® " + Forms.Holiday: OK = 1: GOTO comr
+IF GetDay = CurDay - 2 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "2 ¤­ï ­ § ¤ ¡ë«® " + Forms.Holiday: OK = 1: GOTO comr
+IF GetDay = CurDay - 1 AND MONTH(Forms.DataSer) = MONTH(NOW) THEN label4.caption = "‚ç¥à  ¡ë« " + Forms.Holiday: OK = 1: GOTO comr
+comr:
+NEXT Rec
+CLOSE
+
+END SUB
+
+SUB Label1_Click ()
+
+dialog.HIDE
+
+
+
+LOCATE 1, 1
+
+SHELL "cls"
+SHELL "echo DayBook  Version 5.4 (full)"
+SHELL "echo Copyright 2000 by Mr.R. & Madest Inc."
+SHELL "echo."
+SHELL "echo."
+SHELL "echo."
+SHELL "echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ MADEST INC ÄÄÄÄ"
+SHELL "echo ‘¥£®¤­ï : " + MID$(label2.caption, 1, 55)
+SHELL "echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ"
+SHELL "echo."
+SHELL "echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ"
+SHELL "echo ‘ª®à® ¡ã¤¥â : " + MID$(label3.caption, 1, 55)
+SHELL "echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ"
+SHELL "echo."
+SHELL "echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ"
+SHELL "echo ¥¤ ¢­® ¡ë«® : " + MID$(label4.caption, 1, 55)
+SHELL "echo ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ"
+SYSTEM
+
+
+END SUB
+
+SUB Timer1_Timer ()
+Label5.caption = FORMAT$(NOW, "d mmmm yyyy , dddd                         hh:mm")
+
+END SUB

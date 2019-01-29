@@ -1,0 +1,27 @@
+Линия 20: Class SSPanel of control Base_File was not a loaded control class.
+Линия 41: Class SSPanel of control Leng was not a loaded control class.
+Линия 52: Class SSPanel of control Curr was not a loaded control class.
+Линия 63: Class SSPanel of control All was not a loaded control class.
+Линия 90: Class SSCommand of control Command3D2 was not a loaded control class.
+Линия 101: Class SSCommand of control Command3D1 was not a loaded control class.
+Линия 110: Class SSCommand of control Exit was not a loaded control class.
+Линия 21: Имя свойства Alignment в Base_File недопустимо.
+Линия 23: Имя свойства BevelOuter в Base_File недопустимо.
+Линия 24: Имя свойства Caption в Base_File недопустимо.
+Линия 25: Имя свойства FloodColor в Base_File недопустимо.
+Линия 26: Имя свойства Font3D в Base_File недопустимо.
+Линия 43: Имя свойства BevelOuter в Leng недопустимо.
+Линия 44: Имя свойства Caption в Leng недопустимо.
+Линия 45: Имя свойства Font3D в Leng недопустимо.
+Линия 54: Имя свойства BevelOuter в Curr недопустимо.
+Линия 55: Имя свойства Caption в Curr недопустимо.
+Линия 56: Имя свойства Font3D в Curr недопустимо.
+Линия 65: Имя свойства BevelOuter в All недопустимо.
+Линия 66: Имя свойства Caption в All недопустимо.
+Линия 67: Имя свойства Font3D в All недопустимо.
+Линия 91: Имя свойства Caption в Command3D2 недопустимо.
+Линия 93: Имя свойства Font3D в Command3D2 недопустимо.
+Линия 102: Имя свойства Caption в Command3D1 недопустимо.
+Линия 103: Имя свойства Font3D в Command3D1 недопустимо.
+Линия 111: Имя свойства Caption в Exit недопустимо.
+Линия 112: Имя свойства Font3D в Exit недопустимо.
